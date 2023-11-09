@@ -12,6 +12,7 @@ export const Button = styled.button`
     box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
   }
 `;
+
 export const WrapBox = styled.div`
   display: flex;
   gap: 16px;

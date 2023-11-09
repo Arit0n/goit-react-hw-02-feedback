@@ -1,7 +1,9 @@
 import { Component } from 'react';
+
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notofication/Notification';
+
 import { Section } from './Section/Section';
 import { GlobalStyle } from 'GlobalStyle';
 
@@ -11,20 +13,19 @@ export class App extends Component {
     neutral: 0,
     bad: 0,
   };
+
   updateFeedback = nameFeedback => {
     this.setState(oldData => {
-      let obj = { ...oldData };
-
-      obj[nameFeedback] = oldData[nameFeedback] + 1;
-
-      return obj;
+      return (oldData[nameFeedback] = oldData[nameFeedback] + 0.5);
     });
   };
+
   countTotalFeedback = () => {
     const { good, neutral, bad } = this.state;
     const totalFeedback = good + neutral + bad;
     return totalFeedback;
   };
+
   countPositiveFeedbackPercentage = () => {
     const { good, neutral, bad } = this.state;
     const positivePercentage = Math.floor(
