@@ -16,7 +16,7 @@ export class App extends Component {
 
   updateFeedback = nameFeedback => {
     this.setState(oldData => {
-      return (oldData[nameFeedback] = oldData[nameFeedback] + 0.5);
+      return (oldData[nameFeedback] = oldData[nameFeedback] + 1);
     });
   };
 
